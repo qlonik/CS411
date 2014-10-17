@@ -1,0 +1,5 @@
+To compile project this line can be used:
+javac -d out -sourcepath src src/Main.java
+
+to run the project this line can be used:
+java -cp out Main
