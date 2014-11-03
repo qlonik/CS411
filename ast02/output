@@ -1,0 +1,64 @@
+Progress (Steps by 10 puzzles):
+00.01.02.03.04.05.06.07.08.09.10.11.12.13.14.15.16.17.18.19
+20.21.22.23.24.25.26.27.28.29.30.31.32.33.34.35.36.37.38.39
+40.41.42.43.44.45.46.47.48.49.50.51.52.53.54.55.56.57.58.59
+60.61.62.63.64.65.66.67.68.69.70.71.72.73.74.75.76.77.78.79
+80.81.82.83.84.85.86.87.88.89.90.91.92.93.94.95.96.97.98.99
+Hill climbing
+Nodes generated for each puzzle : 6672
+Solved : 149 out of : 1000
+Nodes generated for solved runs : 6723
+Nodes generated for unsolved runs : 6663
+Percentage : 14.9%
+
+Progress (Steps by 10 puzzles):
+00.01.02.03.04.05.06.07.08.09.10.11.12.13.14.15.16.17.18.19
+20.21.22.23.24.25.26.27.28.29.30.31.32.33.34.35.36.37.38.39
+40.41.42.43.44.45.46.47.48.49.50.51.52.53.54.55.56.57.58.59
+60.61.62.63.64.65.66.67.68.69.70.71.72.73.74.75.76.77.78.79
+80.81.82.83.84.85.86.87.88.89.90.91.92.93.94.95.96.97.98.99
+Hill climbing with random restart
+Nodes generated for each puzzle : 269694
+Solved : 144 out of : 1000
+Nodes generated for solved runs : 269555
+Nodes generated for unsolved runs : 269718
+Percentage : 14.4%
+
+Progress (Steps by 10 puzzles):
+00.01.02.03.04.05.06.07.08.09.10.11.12.13.14.15.16.17.18.19
+20.21.22.23.24.25.26.27.28.29.30.31.32.33.34.35.36.37.38.39
+40.41.42.43.44.45.46.47.48.49.50.51.52.53.54.55.56.57.58.59
+60.61.62.63.64.65.66.67.68.69.70.71.72.73.74.75.76.77.78.79
+80.81.82.83.84.85.86.87.88.89.90.91.92.93.94.95.96.97.98.99
+Hill climbing with random restart with goal state
+Nodes generated for each puzzle : 6724
+Solved : 1000 out of : 1000
+Nodes generated for solved runs : 6724
+Nodes generated for unsolved runs : 0
+Percentage : 100.0%
+
+Progress (Steps by 10 puzzles):
+00.01.02.03.04.05.06.07.08.09.10.11.12.13.14.15.16.17.18.19
+20.21.22.23.24.25.26.27.28.29.30.31.32.33.34.35.36.37.38.39
+40.41.42.43.44.45.46.47.48.49.50.51.52.53.54.55.56.57.58.59
+60.61.62.63.64.65.66.67.68.69.70.71.72.73.74.75.76.77.78.79
+80.81.82.83.84.85.86.87.88.89.90.91.92.93.94.95.96.97.98.99
+Simulated annealing
+Nodes generated for each puzzle : 250000
+Solved : 447 out of : 1000
+Nodes generated for solved runs : 250000
+Nodes generated for unsolved runs : 250000
+Percentage : 44.7%
+
+Progress (Steps by 10 puzzles):
+00.01.02.03.04.05.06.07.08.09.10.11.12.13.14.15.16.17.18.19
+20.21.22.23.24.25.26.27.28.29.30.31.32.33.34.35.36.37.38.39
+40.41.42.43.44.45.46.47.48.49.50.51.52.53.54.55.56.57.58.59
+60.61.62.63.64.65.66.67.68.69.70.71.72.73.74.75.76.77.78.79
+80.81.82.83.84.85.86.87.88.89.90.91.92.93.94.95.96.97.98.99
+Simulated annealing with goal state
+Nodes generated for each puzzle : 141585
+Solved : 900 out of : 1000
+Nodes generated for solved runs : 130065
+Nodes generated for unsolved runs : 250000
+Percentage : 90.0%
