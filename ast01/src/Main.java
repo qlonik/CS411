@@ -1,53 +1,90 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        int NUMBER_OF_PUZZLES = 6;
+        Integer[][] tableManhattan = new Integer[32][2];
+        Integer[][] tableMisplaced = new Integer[32][2];
+        for (int i = 0; i < tableManhattan.length; i++) {
+            for (int j = 0; j < tableManhattan[i].length; j++) {
+                tableManhattan[i][j] = 0;
+            }
+        }
+        for (int i = 0; i < tableMisplaced.length; i++) {
+            for (int j = 0; j < tableMisplaced[i].length; j++) {
+                tableMisplaced[i][j] = 0;
+            }
+        }
+
+        int NUMBER_OF_PUZZLES = 5,
+                MIN_DEPTH = 0,
+                MAX_DEPTH = 100;
         Search search = new Search();
         Puzzle goal = new Puzzle();
 
-        Tile [] tile = {
-                new Tile(7,0), new Tile(2,1), new Tile(0,2),
-                new Tile(1,3), new Tile(3,4), new Tile(8,5),
-                new Tile(4,6), new Tile(5,7), new Tile(6,8)
-        };
-        Puzzle puzzle = new Puzzle();
+        Puzzle puzzle;
 
-        for (int i = 0; i < NUMBER_OF_PUZZLES; i++) {
-            puzzle.shuffle(400);
-            System.out.println("Puzzle starting configuration:");
-            System.out.println(puzzle);
+        boolean printEachSolution = false;
 
-            puzzle.saveState();
-            puzzle.setManhattanHeuristic(true);
-            Puzzle solvedManhattan = search.AStar(puzzle, goal);
-            int nodesGenManhattan = search.getNumberOfCreatedNodes();
-            if (solvedManhattan != null) {
-                System.out.println("Solved with Manhattan heuristic");
-                ArrayList<Puzzle> path = solvedManhattan.getPath();
-                System.out.println("Steps taken to solve the problem: " + path.size());
-                System.out.println("Nodes generated: " + nodesGenManhattan);
-                System.out.println("Solution: ");
-                System.out.println(Puzzle.getDirections(path));
-            } else {
-                System.out.println("Manhattan did not solve");
+        for (int j = MIN_DEPTH; j < MAX_DEPTH; j++) {
+            for (int i = 0; i < NUMBER_OF_PUZZLES; i++) {
+                puzzle = new Puzzle();
+                puzzle.shuffle(j);
+                System.out.println("puzzle j:" + j + " i:" + i);
+
+                puzzle.saveState();
+                puzzle.setManhattanHeuristic(true);
+                Puzzle solvedManhattan = search.AStar(puzzle, goal);
+                int nodesGenManhattan = search.getNumberOfCreatedNodes();
+                ArrayList<Puzzle> manhattanPath = null;
+                if (solvedManhattan != null) {
+                    manhattanPath = solvedManhattan.getPath();
+                    if (printEachSolution) System.out.println("Manhattan p:" + manhattanPath.size() + " n:" + nodesGenManhattan);
+                } else {
+                    if (printEachSolution) System.out.println("Manhattan none");
+                }
+
+                puzzle.restoreState();
+                puzzle.setMisplacedHeuristic(true);
+                Puzzle solvedMisplaced = search.AStar(puzzle, goal);
+                int nodesGenMisplaced = search.getNumberOfCreatedNodes();
+                ArrayList<Puzzle> misplacedPath = null;
+                if (solvedMisplaced != null) {
+                    misplacedPath = solvedMisplaced.getPath();
+                    if (printEachSolution) System.out.println("Misplaced p:" + misplacedPath.size() + " n:" + nodesGenMisplaced);
+                } else {
+                    if (printEachSolution) System.out.println("Misplaced none");
+                }
+
+                if (printEachSolution) {
+                    puzzle.restoreState();
+                    if (manhattanPath != null &&
+                            misplacedPath != null &&
+                            manhattanPath.size() != misplacedPath.size()) {
+                        System.out.println(puzzle);
+                    }
+                }
+
+                if (manhattanPath != null){
+                    tableManhattan[manhattanPath.size()][0] += nodesGenManhattan;
+                    tableManhattan[manhattanPath.size()][1] ++;
+                }
+                if (misplacedPath != null) {
+                    tableMisplaced[misplacedPath.size()][0] += nodesGenMisplaced;
+                    tableMisplaced[misplacedPath.size()][1] ++;
+                }
+
+                if (printEachSolution) System.out.println("----------------------------------------------");
             }
+        }
 
-            puzzle.restoreState();
-            puzzle.setMisplacedHeuristic(true);
-            Puzzle solvedMisplaced = search.AStar(puzzle, goal);
-            int nodesGenMisplaced = search.getNumberOfCreatedNodes();
-            if (solvedMisplaced != null) {
-                System.out.println("Solved with Misplaced heuristic");
-                ArrayList<Puzzle> path = solvedMisplaced.getPath();
-                System.out.println("Steps taken to solve the problem: " + path.size());
-                System.out.println("Nodes generated: " + nodesGenMisplaced);
-                System.out.println("Solution: ");
-                System.out.println(Puzzle.getDirections(path));
-            } else {
-                System.out.println("Misplaced did not solve");
-            }
-            System.out.println("----------------------------------------------");
+        System.out.println("d\t\tA*Manh\t\tA*Misp");
+        System.out.println("----------------------");
+        for (int i = 0; i < tableManhattan.length; i++) {
+            System.out.println("" + i + "\t\t" +
+                            ((double) tableManhattan[i][0] / (double) tableManhattan[i][1]) + "\t\t" +
+                            ((double) tableMisplaced[i][0] / (double) tableMisplaced[i][1])
+            );
         }
     }
 }
