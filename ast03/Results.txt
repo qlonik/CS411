@@ -1,0 +1,4 @@
+MAX: a1
+MIN: b1
+Visited Nodes: 3, 12, 8, 2, 14, 5, 2
+
