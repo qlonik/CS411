@@ -6,6 +6,7 @@ import java.util.List;
 public class Node<T> {
     private T data;
 
+    private String alias;
     private Node<T> parent;
     private List<Node<T>> children;
 
@@ -25,6 +26,15 @@ public class Node<T> {
         this();
         setParent(parent);
         setData(data);
+    }
+
+    public Node<T> setAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+
+    public String getAlias() {
+        return alias;
     }
 
     public Node<T> setParent(Node<T> parent) {

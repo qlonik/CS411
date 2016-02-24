@@ -1,0 +1,1046 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 3cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0pt} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parskip}{0pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+stretch{0.5}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+Huge Learning from Examples}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+Huge CS 411 AI}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+stretch{2}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large Nikita Volodin}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large id 127196}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+stretch{2}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsc{29.11.2014}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+Intro
+\end_layout
+
+\begin_layout Standard
+\noindent
+Any agent is not perfect.
+ Any agent can be improved.
+ However, if agent can be improved, what are the reasons the developers
+ did not include the improvement in the first place.
+ Quite often developers cannot predict all possible situations that the
+ agent might find itself in or all possible changes over time.
+ Also developers sometimes cannot implement a solution by themselves.
+ This is where machine learning becomes useful.
+\end_layout
+
+\begin_layout Section*
+\noindent
+What is machine learning
+\end_layout
+
+\begin_layout Standard
+\noindent
+Machine learning is a scientific discipline that deals with the construction
+ and study of algorithms that can learn from data.
+ Such algorithms operate by building a model based on inputs and using that
+ to make predictions or decisions, rather than following only explicitly
+ programmer instructions.
+ Machine learning is a field where Computer Science and Statistics meet.
+ It also has strong ties to artificial intelligence and optimization.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Machine is said to be learning if it improves its performance on future
+ tasks after making observations about the world or previous tasks.
+\end_layout
+
+\begin_layout Section*
+\noindent
+Forms of learning
+\end_layout
+
+\begin_layout Standard
+\noindent
+Improvements for the agent depend on few different factors, such as which
+ component can be improved, what prior knowledge the agent has, what representat
+ion is used for the data and the component and what feedback is available
+ to learn from.
+\end_layout
+
+\begin_layout Standard
+\noindent
+There are three types of feedback which determine three main types of learning:
+ unsupervised learning, reinforcement learning and supervised learning.
+\end_layout
+
+\begin_layout Standard
+In supervised learning the agent observes some example input and desired
+ outputs.
+ The goal of the agent is to learn a general rule that maps inputs to outputs.
+\end_layout
+
+\begin_layout Standard
+In unsupervised learning the agent learns from the input without any feedback
+ given.
+ The agent has to find a structure in the input on its own.
+\end_layout
+
+\begin_layout Standard
+In reinforcement learning the agent interacts with the environment and trying
+ to reach a goal without knowing if it has come closer to the goal or not.
+ It learns from a series of reinforcements - rewards or punishments.
+ It is left up to agent to decide which actions prior to the reinforcement
+ were most responsible for it.
+\end_layout
+
+\begin_layout Standard
+Usually, in practice, we are using semi-supervised learning where we are
+ given few input-output pairs and we need to provide best possible output
+ for the rest larger collection of inputs.
+\end_layout
+
+\begin_layout Section*
+Unsupervised learning - Clustering
+\end_layout
+
+\begin_layout Standard
+Clustering is the most common task of unsupervised learning.
+ The main goal of clustering methods is to classify input into categories.
+ We are assigning set of observations into subsets (clusters) so that observatio
+ns in the same cluster are similar according to some predefined criteria,
+ and observations from different clusters are different according to the
+ same criteria.
+\end_layout
+
+\begin_layout Section*
+Supervised learning
+\end_layout
+
+\begin_layout Subsection*
+Decision tree learning
+\end_layout
+
+\begin_layout Standard
+This type of learning uses decision trees as a predictive model.
+ As all supervised learning models, this model maps observations to the
+ output values.
+\end_layout
+
+\begin_layout Standard
+The decision tree represents a function that takes vector as input and produces
+ a 
+\begin_inset Quotes eld
+\end_inset
+
+decision
+\begin_inset Quotes erd
+\end_inset
+
+.
+ A decision tree reaches its decision by performing a sequence of tests.
+ Each internal node in the tree corresponds to a test of the value of one
+ of the input attributes, and the branches from the node are labeled with
+ possible values of the attribute.
+ Each leaf node in the tree specifies a value to be returned by the function.
+\end_layout
+
+\begin_layout Standard
+Decision tree is a simple type of learning.
+ Because of this, when we try to apply this type of learning we might face
+ some issues.
+ However, one of it's main benefits is that it is possible for a human to
+ understand the reason for the output of the learning algorithm.
+ This is not the case, however, with some other representations, such as
+ neural networks.
+\end_layout
+
+\begin_layout Subsection*
+Regression with linear models
+\end_layout
+
+\begin_layout Standard
+There is two types of regression: regression with a univariate linear function
+ (
+\begin_inset Quotes eld
+\end_inset
+
+fitting a straight line
+\begin_inset Quotes erd
+\end_inset
+
+) and a multivariate linear function.
+\end_layout
+
+\begin_layout Standard
+Univariate linear function with input 
+\begin_inset Formula $x$
+\end_inset
+
+ and output 
+\begin_inset Formula $y$
+\end_inset
+
+ has the form 
+\begin_inset Formula $y=w_{1}x+w_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ are real-valued coefficients to be learned.
+ The task is to find the linear function that best fits data and it is called
+ linear regression.
+ To fit a line to the data we need to find values 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ such that empirical loss is minimal.
+\end_layout
+
+\begin_layout Standard
+We can extend univariate to multivariate linear regression.
+ However, in this case we have function of form: 
+\begin_inset Formula $y=w_{0}+w_{1}x_{j,1}+w_{2}x_{j,2}+\dots+w_{n}x_{j,n}$
+\end_inset
+
+.
+ Again, we want to find all coefficients such that empirical loss is minimal.
+\end_layout
+
+\begin_layout Subsection*
+Artificial neural networks (ANN)
+\end_layout
+
+\begin_layout Standard
+ANN was inspired by biological neural networks such as brain, which consists
+ of networks of neurons.
+ Each neuron is implementing a linear classifier and it is outputting some
+ value if linear combination of its inputs exceeds some threshold.
+ A neural network is just a collection of such units connected together\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+A neural network is composed of units connected by directed links.
+ A link serves to propagate the activation from one unit to another.
+ Each link also has a numeric weight associated with it, which determines
+ the strength and sign of the connection.
+ To activate, each unit first computes a weighted sum of its inputs, and
+ then applies an activation function to this sum to derive output.
+ The activation function is typically either a hard threshold, in which
+ case the unit is called a perceptron, or a logistic function, in which
+ case the term sigmoid perceptron is used.
+\end_layout
+
+\begin_layout Standard
+Other consideration is the way to connect unit together to form a network.
+ There are two different ways to do this.
+ First is a feed-forward network.
+ Using this type, the connections are only in one direction - it forms a
+ directed acyclic graph.
+ Second is a recurrent network.
+ It feeds its outputs back into its own inputs.
+\end_layout
+
+\begin_layout Standard
+Feed-forward networks are usually arranged in layers, such that each unit
+ receives input only from units in the immediately preceding layer.
+\end_layout
+
+\begin_layout Standard
+Neural networks are often used in cases where multiple outputs are appropriate.
+ For example, when learning problem involves classification into more than
+ two classes, it is common to use one output unit for each class.
+\end_layout
+
+\begin_layout Subsection*
+Support vector machines
+\end_layout
+
+\begin_layout Standard
+Given a set of training examples, each marked as belonging to one of two
+ categories, an SVM training algorithm builds a model that assigns new examples
+ into one category or the other.
+ An SVM model is a representation of the examples as points in space, mapped
+ so that the examples of the separate categories are divided by a clear
+ gap that is as wide as possible.
+ New examples are then mapped into that same space and predicted to belong
+ to a category based on which side of the gap they fall on.
+\end_layout
+
+\begin_layout Section*
+Practical machine learning
+\end_layout
+
+\begin_layout Subsection*
+Handwritten digit recognition
+\end_layout
+
+\begin_layout Standard
+Recognizing handwritten digits is an important problem with many applications.
+ The NIST has a database of 60
+\begin_inset space \thinspace{}
+\end_inset
+
+000 labeled digits.
+ Recognizing digits has become one of the standard benchmark problems for
+ comparing new learning algorithms.
+\end_layout
+
+\begin_layout Standard
+Many different learning approaches have been tried.
+ One of the first and the simplest is the 3-nearest-neighbor classifier.
+ It achieved a test error rate of 2.4%
+\end_layout
+
+\begin_layout Standard
+A single-hidden-layer neural network with 400 input neurons, 300 hidden
+ neurons and 10 output neurons achieved a 1.6% error rate.
+\end_layout
+
+\begin_layout Standard
+A series of specialized neural networks called LeNet were designed specifically
+ for this problem.
+ The training set was augmented by applying some transformations to the
+ actual inputs: shifting, slightly rotating, and scaling the images.
+ The best error rate achieved by LeNet was 0.9%.
+\end_layout
+
+\begin_layout Standard
+A boosted neural network combined three LeNet networks.
+ During testing, the three networks voted with the majority ruling.
+ The test error rate was 0.7%.
+\end_layout
+
+\begin_layout Standard
+A support vector machine with 25
+\begin_inset space \thinspace{}
+\end_inset
+
+000 support vectors achieved an error rate of 1.1%.
+\end_layout
+
+\begin_layout Standard
+A virtual support vector machine starts with a regular SVM and then impoves
+ it with a consideration about the structure of the problem.
+ A virtual SVM achieved an error rate of 0.56%.
+\end_layout
+
+\begin_layout Standard
+Shape matching classification achieved 0.63% error rate.
+\end_layout
+
+\begin_layout Standard
+Humans are estimated to have an error rate of about 0.2% on this problem.
+ However, humans have not been tested as extensively as machine learning
+ algorithms.
+\end_layout
+
+\begin_layout Standard
+Here is the summary of test results.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="8">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="12text%">
+<column alignment="center" valignment="middle" width="9text%">
+<column alignment="center" valignment="middle" width="9text%">
+<column alignment="center" valignment="middle" width="9text%">
+<column alignment="center" valignment="middle" width="9text%">
+<column alignment="center" valignment="middle" width="9text%">
+<column alignment="center" valignment="middle" width="9text%">
+<column alignment="center" valignment="middle" width="9text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 NN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300 Hidden
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LeNet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Boosted LeNet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Virtual SVM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shape match
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error rate (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.56
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.63
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Run time (ms/digit)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Memory requirement (MByte)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.49
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.012
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Training time (days)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+References
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset CommandInset href
+LatexCommand href
+name "Wikipedia's machine learning"
+target "https://en.wikipedia.org/wiki/Machine_learning"
+
+\end_inset
+
+ (https://en.wikipedia.org/wiki/Machine_learning)
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Chapter 18 from 
+\begin_inset Quotes eld
+\end_inset
+
+Artificial Intelligence - A Modern Approach
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
